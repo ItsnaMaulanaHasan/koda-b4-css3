@@ -8,57 +8,242 @@ body {
   box-sizing: border-box;
 }
 
-#navbar {
-  text-align: center;
-  box-shadow: 0 4px 10px #0000001a;
-  display: inline-block;
-  width: 100%;
-  min-height: 60px;
-  align-content: center;
-}
-
+/* navbar */
 nav {
-  margin: 0 50px;
+  display: flex;
+  font-weight: 500;
+  font-size: 1.1vw;
+  padding: 5vh 8vw;
+  justify-content: space-between;
+  align-items: center;
 }
 
-nav ul {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
+nav img {
+  height: 2vw;
 }
 
-nav ul > div {
-  display: inline-block;
-  margin: 0 10px;
-  transition: transform 0.3s ease-in-out;
+nav > div {
+  display: flex;
+  align-items: center;
+  gap: 4vw;
 }
 
-nav ul > div:hover {
-  transform: scale(1.1);
-}
-
-nav ul li a {
-  color: #000;
+nav a {
   text-decoration: none;
+  margin: 0;
+  padding: 0;
+  color: #212832;
 }
-hr {
+
+nav > div > div:nth-child(7) {
+  border: 1px solid;
+  border-radius: 5px;
+  padding: 1.5vh 1.5vw;
+}
+
+nav > label,
+nav > input {
   display: none;
 }
 
+/* main */
+main {
+  padding: 0 8vw;
+}
+
+/* hero section */
+#hero {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20vh;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+}
+
+.hero-text > div:nth-child(4) {
+  display: flex;
+  gap: 3vw;
+  align-items: center;
+}
+
+#hero > div > img {
+  width: 40vw;
+}
+
+.hero-text > div:first-child {
+  color: #df6951;
+  font-size: 1.5vw;
+  font-weight: bold;
+}
+
+.hero-text > div:nth-child(2) {
+  font-family: "Volkhov";
+  font-size: 5vw;
+  font-weight: bold;
+}
+
+.hero-text > div:nth-child(3) {
+  font-size: 1vw;
+  color: #5e6282;
+  font-weight: 500;
+}
+
+.hero-text > div:nth-child(4) > div {
+  display: flex;
+  gap: 1.2vw;
+  align-items: center;
+}
+
+.hero-text > div:nth-child(4) > button {
+  background-color: #f1a501;
+  padding: 2vh 2vw;
+  border-radius: 10px;
+  font-size: 1.2vw;
+  color: #fff;
+  border: none;
+  box-shadow: 0px 20px 35px rgba(241, 165, 1, 0.15);
+}
+
+.hero-text > div:nth-child(4) > div > div {
+  height: 3.3vw;
+  width: 3.3vw;
+  background-color: #df6951;
+  border-radius: 2vw;
+  background-image: url(../img/Play.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1vw;
+  box-shadow: 0px 15px 30px 0px rgba(223, 105, 81, 0.3);
+}
+
+.hero-text > div:nth-child(4) > div > span {
+  font-size: 1vw;
+  color: #686d77;
+}
+
+/* service section */
+#services {
+  height: 70vh;
+}
+
+#services > header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 7vh;
+}
+
+#services > header > div:first-child {
+  font-size: 1.1vw;
+  color: #5e6282;
+  font-weight: 600;
+}
+
+#services > header > div:nth-child(2) {
+  font-family: "Volkhov";
+  font-weight: bold;
+  font-size: 2.5vw;
+}
+
+.list-service {
+  display: flex;
+  gap: 2vw;
+  justify-content: center;
+}
+
+.list-service > div {
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+  width: 20vw;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 4px 10px #0000001a;
+  padding: 3vw;
+}
+
+.list-service > div > img {
+  height: 5vw;
+}
+
+.list-service > div > div:nth-child(2) {
+  font-size: 1.1vw;
+  font-weight: 600;
+  color: #1e1d4c;
+}
+
+.list-service > div > div:nth-child(3) {
+  font-size: 1vw;
+  color: #5e6282;
+}
+
 @media (max-width: 768px) {
-  nav ul li {
-    padding: 10px 0;
+  #hero {
+    margin-bottom: 5vh;
   }
-  nav ul > div {
+
+  #hero > div > img {
+    display: none;
+  }
+
+  .list-service {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #services > header {
+    margin-bottom: 3vh;
+  }
+
+  .list-service > div > img {
+    height: 10vw;
+  }
+  .list-service > div {
+    gap: 1vh;
+  }
+
+  nav > img {
+    height: 4vw;
+  }
+
+  .hero-text > div:nth-child(4) {
+    justify-content: center;
+  }
+
+  .hero-text > div:nth-child(4) > button {
+    background-color: #f1a501;
+    padding: 1vh 2vw;
+    border-radius: 7px;
+    font-size: 1.2vw;
+  }
+
+  nav > div {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 10vh; /* Sesuaikan posisi sesuai tinggi nav */
+    left: 0;
+    background-color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  nav > label {
     display: block;
   }
-  hr {
-    margin: 0;
-    padding: 0;
-    display: block;
+
+  nav > label > img {
+    height: 5vw;
   }
-  nav ul > div:hover {
-    background-color: #c9c9c9;
-    transform: scale(1.1);
+
+  nav > input:checked ~ .nav-links {
+    display: flex;
+    font-size: 2vw;
   }
 }
